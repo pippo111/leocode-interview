@@ -58,6 +58,7 @@ decorate(UserStore, {
   error: observable,
   users: computed,
   searchedUsers: computed,
+  fetchUsers: action,
   setUsers: action,
   setSearch: action
 })
