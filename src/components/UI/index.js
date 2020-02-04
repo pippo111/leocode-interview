@@ -1,3 +1,4 @@
 import Loader from './Loader'
+import Page from './Page'
 
-export { Loader }
+export { Loader, Page }

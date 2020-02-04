@@ -4,10 +4,9 @@ import axios from 'axios'
 
 import * as API from '../../constants/api'
 
-import PageTemplate from '../PageTemplate'
 import SearchBox from '../SearchBox'
 import UserList from './UserList'
-import { Loader } from '../UI'
+import { Loader, Page } from '../UI'
 
 function filterUsers (users, searchTerm) {
   return users.filter(({ name }) =>
@@ -38,12 +37,12 @@ const Users = () => {
   }, [])
 
   return (
-    <PageTemplate title='Users list'>
+    <Page title='Users list'>
       <SearchBox onChange={value => setSearchTerm(value)} />
       {error && <Alert variant='primary'>{error}</Alert>}
       {loading && <Loader caption='Loading users...' />}
       <UserList users={filterUsers(users, searchTerm)} />
-    </PageTemplate>
+    </Page>
   )
 }
 

@@ -4,7 +4,7 @@ import { Box, Text } from '@smooth-ui/core-sc'
 
 const PageTemplate = ({ title, children }) => (
   <Box mx='auto' px={20} maxWidth={800}>
-    {title && <Text variant='h1' textAlign='center'>Users List</Text>}
+    {title && <Text variant='h1' textAlign='center'>{title}</Text>}
     {children}
   </Box>
 )
