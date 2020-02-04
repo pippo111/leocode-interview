@@ -27,7 +27,7 @@ There is only one Input in the project so I handled it just by vanilla js. For b
 
 **State management**
 There is no need for state management in such project so by default I use just local state to handle fetched data. Nevertheless I decided to create another branch with integrated state manager. My usual default in such cases is `redux` or recently just built-in react's `context` but I decided to give `mobx` a try. Honestly I'm not that experienced with `mobx` so I took oportunity to try it out.
-Take a look at [mobx branch](pippo111/leocode-interview/tree/mobx)
+Take a look at [mobx branch](https://github.com/pippo111/leocode-interview/tree/mobx)
 
 **Testing**
 I included some unit / integration / end to end tests into the project. My default is `jest` with `enzyme` and `cypress` for end-to-end testing.
