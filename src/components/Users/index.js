@@ -6,7 +6,13 @@ import * as API from '../../constants/api'
 
 import PageTemplate from '../PageTemplate'
 import SearchBox from '../SearchBox'
+import UserList from './UserList'
 import { Loader } from '../UI'
+
+function filterUsers (users, searchTerm) {
+  return users.filter(({ name }) =>
+    name.toLowerCase().includes(searchTerm.toLowerCase()))
+}
 
 const Users = () => {
   const [users, setUsers] = useState([])
@@ -36,14 +42,7 @@ const Users = () => {
       <SearchBox onChange={value => setSearchTerm(value)} />
       {error && <Alert variant='primary'>{error}</Alert>}
       {loading && <Loader caption='Loading users...' />}
-      <ol>
-        {users
-          .filter(({ name }) =>
-            name.toLowerCase().includes(searchTerm.toLowerCase()))
-          .map(({ id, name, username }) => (
-            <li key={id}>{name} @{username}</li>
-          ))}
-      </ol>
+      <UserList users={filterUsers(users, searchTerm)} />
     </PageTemplate>
   )
 }
