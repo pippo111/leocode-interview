@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserItem snapshot renders 1`] = `
+Array [
+  <span
+    className="main-content"
+  >
+    Test
+  </span>,
+  <span
+    className="sub-content"
+  >
+    @
+    test
+  </span>,
+]
+`;

@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserList snapshot renders 1`] = `
+<section
+  className="sc-AykKC hldZen"
+>
+  <ol>
+    <li>
+      <span
+        className="main-content"
+      >
+        Leanne Graham
+      </span>
+      <span
+        className="sub-content"
+      >
+        @
+        Bret
+      </span>
+    </li>
+    <li>
+      <span
+        className="main-content"
+      >
+        Ervin Howell
+      </span>
+      <span
+        className="sub-content"
+      >
+        @
+        Antonette
+      </span>
+    </li>
+  </ol>
+</section>
+`;
