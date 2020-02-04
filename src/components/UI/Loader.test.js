@@ -17,7 +17,7 @@ describe('Loader', () => {
   it('renders custom caption', () => {
     const caption = 'Loading test...'
 
-    const component = mount(<Loader caption={caption} />)
-    expect(component.text()).toEqual(caption)
+    const wrapper = mount(<Loader caption={caption} />)
+    expect(wrapper.text()).toEqual(caption)
   })
 })

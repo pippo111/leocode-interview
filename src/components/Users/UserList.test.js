@@ -29,8 +29,8 @@ describe('UserList', () => {
   })
 
   it('renders list of users', () => {
-    const component = mount(<UserList users={users} />)
+    const wrapper = mount(<UserList users={users} />)
 
-    expect(component.find('li').length).toEqual(users.length)
+    expect(wrapper.find('li').length).toEqual(users.length)
   })
 })

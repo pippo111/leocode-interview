@@ -17,13 +17,13 @@ describe('Page', () => {
   it('renders page title with child component', () => {
     const pageTitle = 'Test title'
 
-    const component = mount(
+    const wrapper = mount(
       <Page title={pageTitle}>
         <ChildComponent />
       </Page>
     )
 
-    expect(component.find('h1').text()).toEqual(pageTitle)
-    expect(component.find(ChildComponent).length).toEqual(1)
+    expect(wrapper.find('h1').text()).toEqual(pageTitle)
+    expect(wrapper.find(ChildComponent).length).toEqual(1)
   })
 })
