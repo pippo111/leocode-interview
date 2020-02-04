@@ -6,20 +6,25 @@ import * as API from '../../constants/api'
 
 import PageTemplate from '../PageTemplate'
 import SearchBox from '../SearchBox'
+import { Loader } from '../UI'
 
 const Users = () => {
   const [users, setUsers] = useState([])
   const [searchTerm, setSearchTerm] = useState('')
+  const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
 
   useEffect(() => {
     const fetchUsers = async (url) => {
+      setLoading(true)
+
       try {
         const results = await axios.get(url)
-
         setUsers(results.data)
       } catch (error) {
         setError(error.toString())
+      } finally {
+        setLoading(false)
       }
     }
 
@@ -30,6 +35,7 @@ const Users = () => {
     <PageTemplate title='Users list'>
       <SearchBox onChange={value => setSearchTerm(value)} />
       {error && <Alert variant='primary'>{error}</Alert>}
+      {loading && <Loader caption='Loading users...' />}
       <ol>
         {users
           .filter(({ name }) =>
