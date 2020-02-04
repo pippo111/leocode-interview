@@ -1,10 +1,11 @@
 import React from 'react'
-import { Box, Text } from '@smooth-ui/core-sc'
+
+import PageTemplate from '../PageTemplate'
 
 const Users = () => (
-  <Box mx='auto' px={20} maxWidth={800}>
-    <Text variant='h1' textAlign='center'>Users List</Text>
-  </Box>
+  <PageTemplate title='Users list'>
+    <div>search box</div>
+  </PageTemplate>
 )
 
 export default Users
